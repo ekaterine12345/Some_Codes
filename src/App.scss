@@ -1,0 +1,35 @@
+/* $grey-color: #888888; */
+$green-color: green;
+$my-width: 100px;
+
+button{
+    color: $green-color;
+    min-width: $my-width;
+  }
+
+h1{
+    color: red;
+    a{
+        color: brown;
+        &:hover{
+            color: green;
+        }
+    }
+}
+
+@mixin button_styled($background, $border-radius){
+    outline:none;
+    border:none;
+    font-size: 2rem;
+    padding: 1.5rem 4rem;
+    background: $background;
+    color: white;
+    border-radius: $border-radius;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.my-butt{
+    @include button_styled(black, 0.01em)
+}
+
